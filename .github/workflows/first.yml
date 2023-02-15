@@ -10,6 +10,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@master
+      - name: Install packages
+        run: npm install
       - name: Check for linked ticket
         uses: ./.github/actions/check-description
         with:
