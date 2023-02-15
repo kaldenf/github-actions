@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check for linked ticket
-        uses: ./scripts/linked-tickets
+        uses: ./scripts/check-description
         with:
           who-to-greet: 'Mona the Octocat'
 
