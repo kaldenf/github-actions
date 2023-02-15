@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check for linked ticket
-        uses: actions/read-descriptions@v1.1
+        uses: ./read-descriptions
         with:
           who-to-greet: 'Kalden'
 
