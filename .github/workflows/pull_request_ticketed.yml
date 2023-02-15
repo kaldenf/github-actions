@@ -5,7 +5,7 @@ on:
     branches: ['main']
 
 jobs:
-  check_for_linked_tickeet:
+  read_description:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
