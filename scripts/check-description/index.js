@@ -1,7 +1,6 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
 
-const DEFAULT_TICKET_URL = 'https://taskrabbit.atlassian.net/browse/TAPP-XXXX';
 const TAPP_RELEASE_URL = 'https://taskrabbit.atlassian.net/projects/TAPP/versions/';
 const FAILURE_MESSAGE = 'JIRA ticket link not found'
 
