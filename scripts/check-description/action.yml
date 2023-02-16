@@ -4,6 +4,12 @@ inputs:
   pull_request:
     description: 'Pull request'
     required: true
+  pull_request2:
+    description: 'Pull request'
+    required: true
+  pull_request3:
+    description: 'Pull request'
+    required: true
 outputs:
   complete:
     description: 'Completed?'
