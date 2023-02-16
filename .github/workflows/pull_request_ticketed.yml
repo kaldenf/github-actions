@@ -16,8 +16,8 @@ jobs:
       - name: Check for linked ticket
         uses: ./scripts/check-description
         with:
-          pull_request: ${{ github.event.pull_request.issue_comment }}
+          pull_request: ${{ github.event.issue_comment }}
           pull_request2: ${{ github.event.pull_request_comment }}
-          pull_request3: ${{ github.event.pull_request.discussion_comment }}
+          pull_request3: ${{ github.event.discussion_comment }}
 
 
