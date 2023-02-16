@@ -8,7 +8,7 @@ async function run() {
   try {
     const { body } = github.context.payload.pull_request
 
-    if (!body.includes(/((TAPP)+-\d+)/g) && !body.includes(TAPP_RELEASE_URL)) {
+    if (!body.match(/((TAPP)+-\d+)/g) && !body.includes(TAPP_RELEASE_URL)) {
       core.setFailed(FAILURE_MESSAGE);
       return;
     }
