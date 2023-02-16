@@ -1,23 +1,15 @@
-name: first
-
+name: Linked TAPP Ticket
 on:
   pull_request:
+    types: ['edited', 'reopened', 'opened', 'synchronize']
     branches: ['main']
-
 jobs:
   read_description:
-    if: ${{ github.event_name }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@master
       - name: Install packages
-        run: npm install @actions/core @actions/github
+        run: cd scripts && npm install
       - name: Check for linked ticket
         uses: ./scripts/check-description
-        with:
-          pull_request: ${{ github.event.issue_comment }}
-          pull_request2: ${{ github.event.pull_request_comment }}
-          pull_request3: ${{ github.event.discussion_comment }}
-
-
