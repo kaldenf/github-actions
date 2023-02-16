@@ -6,7 +6,7 @@ on:
 
 jobs:
   read_description:
-    if: ${{ github.event }}
+    if: ${{ github.event_name }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -16,6 +16,6 @@ jobs:
       - name: Check for linked ticket
         uses: ./scripts/check-description
         with:
-          pull_request: ${{ github.event }}
+          pull_request: ${{ github.event_name }}
 
 
