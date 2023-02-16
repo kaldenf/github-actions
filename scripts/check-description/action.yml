@@ -1,12 +1,5 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
-inputs:
-  pull_request:
-    description: 'Pull request'
-    required: true
-outputs:
-  complete:
-    description: 'Completed?'
+name: 'Check Description'
+description: 'Read body of PR for TAPP ticket'
 runs:
   using: 'node16'
   main: 'index.js'
